@@ -19,7 +19,7 @@ const quicklySelectFrom = {
     "街路类型": ["params.addrCardType", 1],
     "门牌类型": ["params.addrStreetType", 1],
     "小区类型": ["params.addrCpnType", 1],
-    "楼号类型": ["params.addressType8", 1]
+    "楼号类型": ["params.addressType8", 2]
 }
 const excelFormMap = {
     "驻地网名称": ["zdwNameType", false],
@@ -48,7 +48,7 @@ const mingw_vue_box_text = `
   <br>
   当前楼号：{{building}}
   <br>
-  当前楼号：{{comment}}
+  备注：{{comment}}
   <br>
   当前序号：{{cur_idx}}
   <br>
