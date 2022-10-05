@@ -9,6 +9,8 @@
 // @match        https://www.baidu.com/
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
+// @require https://cdn.staticfile.org/vue/2.6.12/vue.min.js
+// @require https://cdn.staticfile.org/xlsx/0.18.5/xlsx.core.min.js
 // ==/UserScript==
 const quicklySelectFrom = {
     "楼宇类别": ["params.bulidState", 3],
@@ -67,7 +69,7 @@ function start_vue() {
     //meta.setAttribute('name', 'viewport');
     //meta.content ="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui";
     //document.head.appendChild(meta);
-
+    /*  
     let scripts_src = [
         "https://cdn.staticfile.org/vue/2.6.12/vue.min.js",
         "https://cdn.staticfile.org/xlsx/0.18.5/xlsx.core.min.js"
@@ -78,6 +80,7 @@ function start_vue() {
         script.src = e;
         document.body.prepend(script);
     })
+    */
     window.onload = () => {
 
 
@@ -101,7 +104,11 @@ function start_vue() {
                 if (idx != null) {
                     let data = localStorage.getItem("excel_data")
                     this.idx = parseInt(idx)
-                    this.excel_data = JSON.parse(JSON.parse(data))
+                    let json = JSON.parse(data)
+                    if (typeof (json) === "string") {
+                        this.excel_data = JSON.parse(json)
+
+                    } else this.excel_data = json
                     this.updateView()
 
                     //this.community= this.excel_data[this.idx]["驻地网名称"]
