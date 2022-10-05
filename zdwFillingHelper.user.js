@@ -68,8 +68,9 @@ function start_vue() {
     //meta.content ="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui";
     //document.head.appendChild(meta);
 
-    let scripts_src = ["https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js",
-        "https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.core.min.js"
+    let scripts_src = [
+        "https://cdn.staticfile.org/vue/2.6.12/vue.min.js",
+        "https://cdn.staticfile.org/xlsx/0.18.5/xlsx.core.min.js"
     ];
     scripts_src.forEach(e => {
         let script = document.createElement('script');
