@@ -41,7 +41,7 @@ const excelFormMap = {
     "每单元层数": ["params.bulidCS", true],
 }
 const mingw_vue_box_text = `
-  <div id="mingw_vue_box" style="opacity:0.9;position: absolute;bottom: 20px;left: 10;background: #fb7d7d;width: 220px;height: 210;">
+  <div id="mingw_vue_box" style="opacity:0.9;position: absolute;bottom: 20px;left: 10;background: #fb7d7d;width: 220px;height: auto;">
   <div style="display: flex;justify-content: center;">{{ title }}</div><br>
   提示:{{message}}<br>
   <input type="file" @change=getData  accept=".xlsx"></input>
