@@ -65,22 +65,7 @@ const mingw_vue_box_text = `
     `
 
 function start_vue() {
-    //let meta=document.createElement('meta');
-    //meta.setAttribute('name', 'viewport');
-    //meta.content ="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui";
-    //document.head.appendChild(meta);
-    /*  
-    let scripts_src = [
-        "https://cdn.staticfile.org/vue/2.6.12/vue.min.js",
-        "https://cdn.staticfile.org/xlsx/0.18.5/xlsx.core.min.js"
-    ];
-    scripts_src.forEach(e => {
-        let script = document.createElement('script');
-        script.setAttribute('type', 'text/javascript');
-        script.src = e;
-        document.body.prepend(script);
-    })
-    */
+
     window.onload = () => {
 
 
@@ -180,7 +165,8 @@ function start_vue() {
                             this.excel_data = json
                             this.idx = 0
 
-                            this.community = json[0]["驻地网名称"]
+                            //this.community = json[0]["驻地网名称"]
+                            this.updateView()
 
                             localStorage.setItem("excel_data", JSON.stringify(json))
                             localStorage.setItem("excel_data_idx", this.idx)
@@ -189,7 +175,7 @@ function start_vue() {
                             //this.autoFill()
                         })
                     } else {
-                        alert('请选择excel文件')
+                        //alert('请选择excel文件')
                     }
                 },
                 readWorkbookFromLocalFile: function (file, callback) {
