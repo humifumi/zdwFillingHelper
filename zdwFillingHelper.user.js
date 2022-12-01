@@ -6,7 +6,6 @@
 // @author       humi
 // @match        http://10.211.2.134:8081/pure/gbs/busi/cpn/Bulid!toAdd.action*
 // @match        http://127.0.0.1:8080/*
-// @match        https://www.baidu.com/
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // @require https://cdn.staticfile.org/vue/2.6.12/vue.min.js
